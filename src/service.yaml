@@ -1,0 +1,15 @@
+openapi: 3.1.0
+info:
+  title: person-service-api
+  version: 1.0.0-alpha.1
+  summary: 'Person Service API'
+  description: Person Service API
+  contact:
+    name: Fednot
+    email: api@fednot.be
+    url: https://www.fednot.be
+  license:
+    name: unlicensed
+    url: https://www.fednot.be
+servers:
+  - url: http://localhost:3000

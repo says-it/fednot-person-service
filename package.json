@@ -1,0 +1,17 @@
+{
+  "name": "fednot-person-service",
+  "version": "0.0.1",
+  "description": "Fednot Person Service",
+  "scripts": {
+    "build": "redocly bundle ./src/service.yaml -o ./build/centralis.yaml"
+  },
+  "author": "Fednot",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "@redocly/cli": "^1.18.0"
+  },
+  "pre-commit": [
+    "build"
+  ]
+}
