@@ -1,0 +1,77 @@
+title: Error
+description: |-
+  All the errors are returned in the same standard format and contain at least the following fields. Additional fields could be included depending on the error.
+  * __type__ 
+    Identifies the error type.
+  * __title__ 
+    Title of this error.
+  * __detail__ 
+    Additional details/description of the error.
+  * __instance__ 
+    A unique identifier for this error.
+  * __timestamp__ 
+    The time at which this error occurred.
+  * __status__
+    The status code of the error.
+  
+  As specified the errors returned are always accompanied by an error type. This error type identifies the type of error in hierarchical fashion. As an example the following error type; '/error/client/technical/unauthorized' indicates that this error is a technical client error preventing the authorization of the request, e.g the client did not provide a username. The precise nature of the error can usually be found in the details field.
+  A number of errors are generic errors that can be returned for each resource;
+  * /error/client/technical/**malformed**
+    * Request contains malformed JSON
+  * /error/client/technical/**unauthorized**
+    * Missing identity headers
+  * /error/client/technical/**methodnotallowed**
+    * Attempting to use a method that is not available for the specified resource
+  * /error/client/technical/**unsupportedmedia**
+    * The payload was provided in an unsupported format. (Content-Type not supported)
+  * /error/client/technical/**ratelimit**
+    * Too many requests per time unit.
+  * /error/client/technical/**notfound**
+    * The requested resource could not be found.
+  * /error/client/technical/**largerequest**
+    * The request exceeded the maximum request size.
+  * /error/client/technical/**validation**
+    * Missing fields, fields containing invalid values, etc
+  * /error/server/**technical**
+    * An unexpected error occurred.
+  * /error/server/technical/**unavailable**
+    * The service is temporarily unavailable.
+type: object
+required:
+  - timestamp
+  - title
+  - type
+  - detail
+  - instance
+  - status
+properties:
+  timestamp:
+    type: string
+    format: date-time
+    description: Time at which the error occurred.
+    readOnly: true
+  title:
+    type: string
+    description: Short description of the error that occurred.
+    readOnly: true
+  type:
+    type: string
+    description: Provides a readable hierarchical description of the error type (akin to an error code).
+  detail:
+    type: string
+    description: A more detailed description of the error that occurred.
+    readOnly: true
+  instance:
+    type: string
+    description: 'Unique identifier for this error, typically contains a transaction identifier.'
+    readOnly: true
+  status:
+    type: integer
+    format: int32
+    description: References the HTTP status code associated with this error.
+  errors:
+    type: array
+    description: Provides more detailed description of the errors that occurred. Useful when e.g more than one validation error was detected.
+    items:
+      $ref: './ErrorDetail.yaml'
+    readOnly: true

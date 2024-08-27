@@ -1,0 +1,5 @@
+description: The person.
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/Person/Person.yaml'

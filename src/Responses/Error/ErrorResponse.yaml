@@ -1,0 +1,5 @@
+description: Error response object returned for each server error.
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/Error/Error.yaml'

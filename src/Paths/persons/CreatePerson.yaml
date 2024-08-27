@@ -1,0 +1,12 @@
+operationId: post-persons
+summary: Create a person.
+description: Creates a person.
+tags:
+  - Person
+requestBody:
+  $ref: '../../Requests/Person/CreatePersonRequest.yaml'
+responses:
+  '201':
+    $ref: '../../Responses/Person/PersonResponse.yaml'
+  default:
+    $ref: '../../Responses/Error/ErrorResponse.yaml'

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Fednot Person Service",
   "scripts": {
-    "build": "redocly bundle ./src/service.yaml -o ./build/centralis.yaml"
+    "build": "redocly bundle ./src/service.yaml -o ./build/service.yaml"
   },
   "author": "Fednot",
   "license": "UNLICENSED",

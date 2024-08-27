@@ -1,0 +1,8 @@
+title: PersonCreate
+type: object
+required:
+  - nrn
+properties:
+  nrn:
+    type: string
+    description: 'The NRN of the person'

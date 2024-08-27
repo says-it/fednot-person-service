@@ -1,0 +1,4 @@
+content:
+  application/json:
+    schema:
+      $ref: '../../Schemas/Person/PersonCreate.yaml'

@@ -1,0 +1,14 @@
+title: ModelMetaData
+type: object
+description: 'Metadata about any resource being retrieved from the server'
+properties:
+  createdAt:
+    description: 'Date and time of when the resource was initially created.  Immutable during for the entire resource
+     lifecycle'
+    type: string
+    format: date-time
+    readOnly: true
+  modifiedAt:
+    description: 'Date and time of when the resource was last modified.'
+    type: string
+    format: date-time

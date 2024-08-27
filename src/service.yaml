@@ -13,3 +13,6 @@ info:
     url: https://www.fednot.be
 servers:
   - url: http://localhost:3000
+paths:
+  /persons:
+    $ref: './Paths/persons/index.yaml'

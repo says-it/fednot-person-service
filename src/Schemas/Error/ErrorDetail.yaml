@@ -1,0 +1,22 @@
+title: ErrorDetail
+type: object
+properties:
+  resource:
+    type: string
+    description: Identifies the resource/location where the error occurred.
+    readOnly: true
+  field:
+    type: string
+    description: Identifies the specific field causing the error.
+    readOnly: true
+  detail:
+    type: string
+    description: Detailed description of the error.
+    readOnly: true
+  code:
+    type: string
+    description: |
+      Indicates the type of problem detected with the specified field. Some possible values:
+      * missing
+      * invalid
+    readOnly: true

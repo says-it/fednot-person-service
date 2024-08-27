@@ -1,0 +1,16 @@
+title: BaseModel
+type: object
+required:
+  - id
+  - resourceType
+  - meta
+properties:
+  id:
+    type: string
+    description: The unique identifier of the resource.
+    example: '123'
+  resourceType:
+    type: string
+    description: The type of the resource
+  meta:
+    $ref: './ModelMetaData.yaml'

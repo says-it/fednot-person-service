@@ -1,0 +1,13 @@
+title: LocalizedString
+type: object
+properties:
+  nl:
+    type: string
+  fr:
+    type: string
+  en:
+    type: string
+examples:
+  - nl: Nederlands
+    fr: Français
+    en: English
